@@ -59,7 +59,7 @@ class CanvasViewController: UIViewController {
         let translation = sender.translation(in: view)
         
         if sender.state == .began {
-            var imageView = sender.view as! UIImageView
+            let imageView = sender.view as! UIImageView
             newlyCreatedFace = UIImageView(image: imageView.image)
             newlyCreatedFace.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(didPan(sender:))))
             newlyCreatedFace.isUserInteractionEnabled = true
